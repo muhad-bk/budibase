@@ -23,7 +23,7 @@
     }
 
     if (!APP_URL_REGEX.test(url)) {
-      return 'Invalid URL'
+      return "Invalid URL"
     }
   }
 </script>
