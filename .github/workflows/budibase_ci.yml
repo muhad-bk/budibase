@@ -44,6 +44,11 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
+    - run: |
+        docker image pull minio/minio:RELEASE.2022-10-24T18-35-07Z
+        docker image pull budibase/couchdb
+        docker image pull redis
+
     - name: Install Pro
       run: yarn install:pro $BRANCH $BASE_BRANCH
 
